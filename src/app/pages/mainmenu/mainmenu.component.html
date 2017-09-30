@@ -1,0 +1,55 @@
+<div class = "wrapper">
+  <div>
+    <img class="logo" src="assets/images/LOGO_med_navn2.jpg" alt="..." (click) = "logoClick()"S>
+
+    <div class="menuitem" 
+    (click)="setSelectedItem(1)" 
+        (mouseenter) ="enterItem(1)"  (mouseleave) ="leaveItem(1)"
+        [style.color]="mousePointingAtItem == 1 || selectedItem==1 ? 'white' : '#5E5E5E'"         
+        [style.background-color]="mousePointingAtItem == 1 || selectedItem==1 ? '#A5A5A5' : 'white'">
+        CONCEPTUAL
+    </div>
+       
+    <div class="menuitem" 
+         (click)="setSelectedItem(2)" 
+         (mouseenter) ="enterItem(2)"  (mouseleave) ="leaveItem(2)"
+         [style.color]="mousePointingAtItem == 2 || selectedItem==2 ? 'white' : '#5E5E5E'"         
+         [style.background-color]="mousePointingAtItem == 2 || selectedItem==2 ? '#A5A5A5' : 'white'">
+       NATURE
+    </div>
+       
+    <div class="menuitem" 
+        (click)="setSelectedItem(3)" 
+        (mouseenter) ="enterItem(3)"  (mouseleave) ="leaveItem(3)"
+        [style.color]="mousePointingAtItem == 3 || selectedItem==3 ? 'white' : '#5E5E5E'"         
+        [style.background-color]="mousePointingAtItem == 3 || selectedItem==3 ? '#A5A5A5' : 'white'">
+        PEOPLE
+    </div>
+
+    <br>      
+    <div class="menuitem" 
+        (click)="setSelectedItem(4)" 
+        (mouseenter) ="enterItem(4)"  (mouseleave) ="leaveItem(4)"
+        [style.color]="mousePointingAtItem == 4 || selectedItem==4 ? 'white' : '#5E5E5E'"         
+        [style.background-color]="mousePointingAtItem == 4 || selectedItem==4 ? '#A5A5A5' : 'white'">
+        ABOUT
+    </div> 
+  </div>
+
+
+  <div *ngIf="selectedItem==0" class= "maindisplay" >
+      <slideshowcanvas></slideshowcanvas>
+  </div>
+  <div *ngIf="selectedItem==1" class= "maindisplay" >
+      <conceptualgrid></conceptualgrid>
+  </div>  
+  <div *ngIf="selectedItem==2" class= "maindisplay" >
+      <naturegrid></naturegrid>
+  </div>  
+  <div *ngIf="selectedItem==3" class= "maindisplay" >
+      <peoplegrid></peoplegrid>
+  </div>  
+  <div *ngIf="selectedItem==4" class= "maindisplay" >
+      <about></about>
+  </div>        
+</div>

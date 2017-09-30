@@ -1,0 +1,24 @@
+  <div>
+    <img class="logo" src="assets/images/controllers/logo.jpg" alt="...">
+
+    <label class="imageinfo" >{{imageInfo}}</label>
+    <img class="previous" src={{previousImageIcon}}
+        (click)="executeItem(1)" 
+        (mouseenter) ="enterItem(1)"  (mouseleave) ="leaveItem(1)"
+        title="Go to previous image">
+    <img class="play" src={{playImageIcon}}
+        (click)="executeItem(2)" 
+        (mouseenter) ="enterItem(2)"  (mouseleave) ="leaveItem(2)"
+        title="Start/stop autoplay">
+    <img class="next" src={{nextImageIcon}}
+        (click)="executeItem(3)" 
+        (mouseenter) ="enterItem(3)"  (mouseleave) ="leaveItem(3)"
+        title="Go to next image">
+    <img class="exit" src={{exitScreenIcon}}
+        (click)="executeItem(4)" 
+        (mouseenter) ="enterItem(4)"  (mouseleave) ="leaveItem(4)"
+        title="Exit screen">
+ 
+  </div>
+  <hr>
+  <slideshowcanvas></slideshowcanvas>

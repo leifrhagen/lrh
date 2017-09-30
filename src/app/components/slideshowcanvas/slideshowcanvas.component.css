@@ -1,0 +1,23 @@
+:host { display:table; width:100%; }
+:host:after {
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:3%;
+    background:white;
+    border-top:3px solid #ccc;
+    content:"";
+}
+.mini-image {
+    display:inline-block;
+    width:50%;
+    cursor:pointer;
+    margin-top:-3px;
+    vertical-align:top;
+}
+image-preview, .images-list {
+    vertical-align:top; display:table-cell;
+}
+image-preview { width:75%; border:1px solid #999; }
+.images-list { width:25%; background:#f9f9f9; }
